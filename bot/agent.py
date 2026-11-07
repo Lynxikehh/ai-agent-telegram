@@ -104,11 +104,11 @@ class Brain:
         opts: dict[str, Any] = {
             "system_prompt": _system_prompt(),
             "mcp_servers": {"reminders": server},
+            # allowed_tools meng-auto-approve tool kita tanpa prompt.
+            # (Tidak pakai bypassPermissions karena ditolak saat jalan sebagai root.)
             "allowed_tools": _ALLOWED_TOOLS,
             "disallowed_tools": _DISALLOWED_TOOLS,
-            "permission_mode": "bypassPermissions",
             "setting_sources": [],  # jangan muat settings/CLAUDE.md dari disk
-            "cwd": "/data",
             "env": {"CLAUDE_CODE_OAUTH_TOKEN": config.CLAUDE_CODE_OAUTH_TOKEN},
         }
         if config.CLAUDE_MODEL:
