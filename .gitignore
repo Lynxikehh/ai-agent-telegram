@@ -1,0 +1,19 @@
+# Rahasia — JANGAN pernah di-commit
+.env
+
+# Database lokal
+*.db
+data/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

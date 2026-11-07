@@ -1,0 +1,11 @@
+services:
+  bot:
+    build: .
+    container_name: ai-agent-telegram
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - bot-data:/data
+
+volumes:
+  bot-data:
